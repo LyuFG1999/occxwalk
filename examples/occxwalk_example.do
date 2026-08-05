@@ -4,7 +4,7 @@ set more off
 
 * occxwalk bilingual example / occxwalk 中英文示例
 * Install once / 首次安装：
-* net install occxwalk, from("https://raw.githubusercontent.com/LyuFG1999/occxwalk/main") replace
+* net install occxwalk, from("https://lyufg1999.github.io/occxwalk") replace
 
 * List supported systems / 列出支持的编码体系
 occxwalk systems
@@ -74,4 +74,3 @@ occxwalk match onet_code, from(ONET) to(SOC10) prefix(soc)
 list, noobs abbreviate(28)
 
 display as result "occxwalk example completed / 示例运行完成"
-
