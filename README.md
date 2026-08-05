@@ -10,7 +10,7 @@ Stata occupation-code labels, descriptions, and crosswalks for 11 coding systems
 
 ```stata
 net install occxwalk, ///
-    from("https://raw.githubusercontent.com/LyuFG1999/occxwalk/main") ///
+    from("https://lyufg1999.github.io/occxwalk") ///
     replace
 
 occxwalk systems
@@ -42,4 +42,3 @@ The command runs fully offline after installation. Python, an API key, and an on
 ## Important limitation / 重要限制
 
 CFPS codes 10544–10548 each have two conflicting source rows distinguished by enterprise size, but the code itself is identical. The program deterministically uses the first Excel source row and prints a warning. / CFPS 代码 10544–10548 在源表中各有两条按企业规模区分的冲突记录，但代码相同；程序固定采用 Excel 首行，并在命中时警告。
-
