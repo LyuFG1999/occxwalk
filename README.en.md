@@ -32,7 +32,7 @@ System names and aliases are case-insensitive.
 
 ```stata
 net install occxwalk, ///
-    from("https://raw.githubusercontent.com/LyuFG1999/occxwalk/main") ///
+    from("https://lyufg1999.github.io/occxwalk") ///
     replace
 ```
 
@@ -128,4 +128,3 @@ Python and a model are not runtime dependencies. Python is needed only to rebuil
 - Confidence values are GPT56 workbook outputs and do not imply endorsement by an official statistical classification authority.
 
 See [`examples/occxwalk_example.do`](examples/occxwalk_example.do) for a runnable example.
-
