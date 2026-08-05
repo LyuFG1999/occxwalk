@@ -1,0 +1,103 @@
+{
+  "package": "occxwalk",
+  "data_version": "2026-07-24-GPT56",
+  "systems": [
+    "CFPS",
+    "CGSS06",
+    "CSS",
+    "GB2015_full",
+    "GB2015_reduce",
+    "GB9909",
+    "ISCO08",
+    "ISCO68",
+    "ISCO88",
+    "ONET_SOC2019_full",
+    "SOC2010"
+  ],
+  "text_code_systems": [
+    "ONET_SOC2019_full",
+    "SOC2010"
+  ],
+  "catalog_rows": 5764,
+  "link_rows": 57640,
+  "ambiguous_codes": {
+    "CFPS": [
+      "10544",
+      "10545",
+      "10546",
+      "10547",
+      "10548"
+    ]
+  },
+  "exact_duplicate_rows_removed": {
+    "GB2015_full": 2
+  },
+  "source_workbooks": [
+    {
+      "file": "职业体系匹配_主体系_CFPS_GPT56.xlsx",
+      "system": "CFPS",
+      "rows": 500,
+      "sha256": "8fd1199cebd3dc13360f883313e72510ee70094324c10a1a128832c7142ff303"
+    },
+    {
+      "file": "职业体系匹配_主体系_CGSS06_GPT56.xlsx",
+      "system": "CGSS06",
+      "rows": 711,
+      "sha256": "88b49665746f3c52de2d5e198c51136e1e2f33139b441c99c5e410b4002d0fbc"
+    },
+    {
+      "file": "职业体系匹配_主体系_CSS_GPT56.xlsx",
+      "system": "CSS",
+      "rows": 247,
+      "sha256": "0dd627567245fe69314903c6137e90f3020221a5803a484a3601f22bc4e5cf9f"
+    },
+    {
+      "file": "职业体系匹配_主体系_GB2015_full_GPT56.xlsx",
+      "system": "GB2015_full",
+      "rows": 511,
+      "sha256": "54a5f2dd68d963a1b64fba44cea582182a25dd063595b8658cfa58f44f4bf35e"
+    },
+    {
+      "file": "职业体系匹配_主体系_GB2015_reduce_GPT56.xlsx",
+      "system": "GB2015_reduce",
+      "rows": 362,
+      "sha256": "e6c03d44080efde2ba625037840464642f06fe0a578312cfa0424dda3df8b069"
+    },
+    {
+      "file": "职业体系匹配_主体系_GB9909_GPT56.xlsx",
+      "system": "GB9909",
+      "rows": 477,
+      "sha256": "99e0053dd2222acfb1e92919625189fd5a4f3441861c18f68e7aac8e69f4ef18"
+    },
+    {
+      "file": "职业体系匹配_主体系_ISCO08_GPT56.xlsx",
+      "system": "ISCO08",
+      "rows": 436,
+      "sha256": "fb40ff3e7ac1c8fe437ddfcff014b7c80587beb824cb1e90bcc67eff52e984a2"
+    },
+    {
+      "file": "职业体系匹配_主体系_ISCO68_GPT56.xlsx",
+      "system": "ISCO68",
+      "rows": 281,
+      "sha256": "ac19fa40647c6ca883f1462f5147140b45a64430dc6b240de5cd52750f6f7d36"
+    },
+    {
+      "file": "职业体系匹配_主体系_ISCO88_GPT56.xlsx",
+      "system": "ISCO88",
+      "rows": 390,
+      "sha256": "5380d66f0c155b960460c7311971a44a9d2cf8d70549150f0f068589e5c538ac"
+    },
+    {
+      "file": "职业体系匹配_主体系_ONET_SOC2019_full_GPT56.xlsx",
+      "system": "ONET_SOC2019_full",
+      "rows": 1016,
+      "sha256": "40cd623ed183aa0fb35f0dff87dd5df0a1908f9141284d68915d1be78272422c"
+    },
+    {
+      "file": "职业体系匹配_主体系_SOC2010_GPT56.xlsx",
+      "system": "SOC2010",
+      "rows": 840,
+      "sha256": "6c72dfd2dac6c257dd446fac2c1a714cf28b2485f2d1a65f984d310ec838ae36"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+v 3
+d occxwalk: occupation-code labels, descriptions, and GPT56 crosswalks
+d Version 1.0.0, 04 August 2026
+f occxwalk.ado
+f occxwalk.sthlp
+F occxwalk_catalog.dta
+F occxwalk_links.dta
+f README.md
+f occxwalk_manifest.json
