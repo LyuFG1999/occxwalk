@@ -32,7 +32,7 @@
 
 ```stata
 net install occxwalk, ///
-    from("https://raw.githubusercontent.com/LyuFG1999/occxwalk/main") ///
+    from("https://lyufg1999.github.io/occxwalk") ///
     replace
 ```
 
@@ -128,4 +128,3 @@ occxwalk match onet_code, from(ONET) to(SOC10) prefix(soc)
 - 置信度来自工作簿中的 GPT56 匹配结果，不代表官方统计分类机构的认可。
 
 完整示例见 [`examples/occxwalk_example.do`](examples/occxwalk_example.do)。
-
