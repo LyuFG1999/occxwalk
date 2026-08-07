@@ -20,6 +20,7 @@ SYSTEMS = [
     "CSS",
     "GB2015_full",
     "GB2015_reduce",
+    "GB2022",
     "GB9909",
     "ISCO08",
     "ISCO68",
@@ -38,7 +39,7 @@ def parse_args() -> argparse.Namespace:
         "--input-dir",
         type=Path,
         required=True,
-        help="Directory containing the 11 职业体系匹配_主体系_*_GPT56.xlsx files.",
+        help="Directory containing the 12 职业体系匹配_主体系_*_GPT56.xlsx files.",
     )
     parser.add_argument(
         "--output-dir",

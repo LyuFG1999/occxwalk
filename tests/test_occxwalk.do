@@ -8,6 +8,7 @@ adopath ++ `"`package_dir'"'
 
 occxwalk systems
 assert strpos("`r(systems)'", "CFPS") > 0
+assert strpos("`r(systems)'", "GB2022") > 0
 
 clear
 input double occ
@@ -36,6 +37,25 @@ occxwalk match occ, from(cfps) to(isco08) prefix(isco)
 assert isco_code[1] == "1120"
 assert isco_name[1] == "Managing Directors and Chief Executives"
 assert abs(isco_confidence[1] - .62) < 1e-12
+
+clear
+input long gb2022
+10100
+10201
+99999
+.
+end
+occxwalk label gb2022, from(gB22) replace
+assert r(matched) == 2
+assert r(unmatched) == 1
+decode gb2022, generate(gb2022_label)
+assert gb2022_label[1] == "中国共产党机关和基层组织负责人"
+occxwalk text gb2022, from(gb2022full) generate(gb2022_name) field(name)
+assert gb2022_name[2] == "国家权力机关负责人"
+occxwalk match gb2022, from(GB2022) to(CFPS) prefix(cfps22)
+assert cfps22_code[1] == "10100"
+assert cfps22_name[1] == "中国共产党中央委员会和地方各级组织负责人"
+assert abs(cfps22_confidence[1] - .90) < 1e-12
 
 clear
 input str8 isco_source
@@ -74,4 +94,3 @@ assert _rc == 109
 
 display as result "ALL_OCCXWALK_TESTS_PASSED"
 exit, clear
-

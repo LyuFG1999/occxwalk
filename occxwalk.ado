@@ -1,4 +1,4 @@
-*! occxwalk 1.0.0  04aug2026
+*! occxwalk 1.1.0  07aug2026
 *! Occupation-code labels, descriptions, and GPT56 crosswalks
 
 program define occxwalk, rclass
@@ -39,10 +39,10 @@ end
 program define _occxwalk_systems, rclass
     version 14.0
     di as txt "Supported occupation coding systems"
-    di as result "  CFPS  CGSS06  CSS  GB2015_full  GB2015_reduce  GB9909"
+    di as result "  CFPS  CGSS06  CSS  GB2015_full  GB2015_reduce  GB2022  GB9909"
     di as result "  ISCO08  ISCO68  ISCO88  ONET_SOC2019_full  SOC2010"
     di as txt "Text-code-only systems: ONET_SOC2019_full and SOC2010"
-    return local systems "CFPS CGSS06 CSS GB2015_full GB2015_reduce GB9909 ISCO08 ISCO68 ISCO88 ONET_SOC2019_full SOC2010"
+    return local systems "CFPS CGSS06 CSS GB2015_full GB2015_reduce GB2022 GB9909 ISCO08 ISCO68 ISCO88 ONET_SOC2019_full SOC2010"
 end
 
 
@@ -62,6 +62,7 @@ program define _occxwalk_resolve_system, rclass
     else if "`key'" == "css" local system "CSS"
     else if inlist("`key'", "gb2015full", "gb2015", "gb15", "gb15f", "gb2015f") local system "GB2015_full"
     else if inlist("`key'", "gb2015reduce", "gb15r", "gb2015r", "gb15reduce", "gb2015reduced") local system "GB2015_reduce"
+    else if inlist("`key'", "gb2022", "gb22", "gb2022full", "gb22full") local system "GB2022"
     else if inlist("`key'", "gb9909", "gb99", "gb09", "gb1999", "gb2009") local system "GB9909"
     else if inlist("`key'", "isco08", "isco2008") local system "ISCO08"
     else if inlist("`key'", "isco68", "isco1968") local system "ISCO68"
@@ -238,7 +239,7 @@ program define _occxwalk_label, rclass
     quietly drop `key' `mapname' `mapamb' `order' `tag'
 
     if `unmatched' di as txt "note: `unmatched' nonmissing observation(s) did not match `source'"
-    if `ambiguous' di as err "warning: `ambiguous' observation(s) use a duplicated CFPS code; the first Excel source row was used"
+    if `ambiguous' di as err "warning: `ambiguous' observation(s) use a duplicated `source' code; the first Excel source row was used"
     di as result "value label `labelname' attached to `varlist' (`matched' matched observation(s))"
     return scalar matched = `matched'
     return scalar unmatched = `unmatched'
@@ -315,7 +316,7 @@ program define _occxwalk_text, rclass
 
     if `invalid' di as txt "note: `invalid' observation(s) contain nondigit text and could not match numeric system `source'"
     if `unmatched' di as txt "note: `unmatched' nonmissing observation(s) did not match `source'"
-    if `ambiguous' di as err "warning: `ambiguous' observation(s) use a duplicated CFPS code; the first Excel source row was used"
+    if `ambiguous' di as err "warning: `ambiguous' observation(s) use a duplicated `source' code; the first Excel source row was used"
     di as result "generated `generate' (`matched' matched observation(s))"
     return scalar matched = `matched'
     return scalar unmatched = `unmatched'
@@ -412,7 +413,7 @@ program define _occxwalk_match, rclass
 
     if `invalid' di as txt "note: `invalid' observation(s) contain nondigit text and could not match numeric system `source'"
     if `unmatched' di as txt "note: `unmatched' nonmissing observation(s) did not match `source'"
-    if `ambiguous' di as err "warning: `ambiguous' observation(s) use a duplicated CFPS code; the first Excel source row was used"
+    if `ambiguous' di as err "warning: `ambiguous' observation(s) use a duplicated `source' code; the first Excel source row was used"
     di as result "generated `codevar', `namevar', and `confvar' (`matched' matched observation(s))"
     return scalar matched = `matched'
     return scalar unmatched = `unmatched'

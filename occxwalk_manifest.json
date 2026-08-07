@@ -1,12 +1,13 @@
 {
   "package": "occxwalk",
-  "data_version": "2026-07-24-GPT56",
+  "data_version": "2026-08-06-GPT56",
   "systems": [
     "CFPS",
     "CGSS06",
     "CSS",
     "GB2015_full",
     "GB2015_reduce",
+    "GB2022",
     "GB9909",
     "ISCO08",
     "ISCO68",
@@ -18,8 +19,8 @@
     "ONET_SOC2019_full",
     "SOC2010"
   ],
-  "catalog_rows": 5764,
-  "link_rows": 57640,
+  "catalog_rows": 6214,
+  "link_rows": 68354,
   "ambiguous_codes": {
     "CFPS": [
       "10544",
@@ -37,67 +38,73 @@
       "file": "职业体系匹配_主体系_CFPS_GPT56.xlsx",
       "system": "CFPS",
       "rows": 500,
-      "sha256": "8fd1199cebd3dc13360f883313e72510ee70094324c10a1a128832c7142ff303"
+      "sha256": "d78903381c0d9103303003f0710b6fe305c8ccba5473f8a5660e83e05f53cc92"
     },
     {
       "file": "职业体系匹配_主体系_CGSS06_GPT56.xlsx",
       "system": "CGSS06",
       "rows": 711,
-      "sha256": "88b49665746f3c52de2d5e198c51136e1e2f33139b441c99c5e410b4002d0fbc"
+      "sha256": "81793470b6327df2d8025f33e5de5027d7489a8643cd991a3ec56ce1194da908"
     },
     {
       "file": "职业体系匹配_主体系_CSS_GPT56.xlsx",
       "system": "CSS",
       "rows": 247,
-      "sha256": "0dd627567245fe69314903c6137e90f3020221a5803a484a3601f22bc4e5cf9f"
+      "sha256": "77c798d5d7eafc128ec6e8820c00d491300d5e2e08bc596d18511489339280fc"
     },
     {
       "file": "职业体系匹配_主体系_GB2015_full_GPT56.xlsx",
       "system": "GB2015_full",
       "rows": 511,
-      "sha256": "54a5f2dd68d963a1b64fba44cea582182a25dd063595b8658cfa58f44f4bf35e"
+      "sha256": "d54aec311b2581d9dd23a643787aecd6ea38c4bcdaa09195df2a4bc8c982c792"
     },
     {
       "file": "职业体系匹配_主体系_GB2015_reduce_GPT56.xlsx",
       "system": "GB2015_reduce",
       "rows": 362,
-      "sha256": "e6c03d44080efde2ba625037840464642f06fe0a578312cfa0424dda3df8b069"
+      "sha256": "703dba304e69913658ed38f1ef31cfcce1b8608847994479e35d0f0dfd91ede0"
+    },
+    {
+      "file": "职业体系匹配_主体系_GB2022_GPT56.xlsx",
+      "system": "GB2022",
+      "rows": 450,
+      "sha256": "98f32cb837ff31067ad394bd1a0ba253bdd5aef506901cc7e145a680bdfb6973"
     },
     {
       "file": "职业体系匹配_主体系_GB9909_GPT56.xlsx",
       "system": "GB9909",
       "rows": 477,
-      "sha256": "99e0053dd2222acfb1e92919625189fd5a4f3441861c18f68e7aac8e69f4ef18"
+      "sha256": "4d95a189af96fad6142bcf7afe7a782af6ade1788c3f689a12301e686bade156"
     },
     {
       "file": "职业体系匹配_主体系_ISCO08_GPT56.xlsx",
       "system": "ISCO08",
       "rows": 436,
-      "sha256": "fb40ff3e7ac1c8fe437ddfcff014b7c80587beb824cb1e90bcc67eff52e984a2"
+      "sha256": "3f3cae21ff3dda9dde571cd7cbf1b4d1b70a07fd7566a192c2bc74200584c887"
     },
     {
       "file": "职业体系匹配_主体系_ISCO68_GPT56.xlsx",
       "system": "ISCO68",
       "rows": 281,
-      "sha256": "ac19fa40647c6ca883f1462f5147140b45a64430dc6b240de5cd52750f6f7d36"
+      "sha256": "a9b6180f39da2dfca28c92d4a84f3167ef3d3de3b51bf0511c4d6cc7e94ec562"
     },
     {
       "file": "职业体系匹配_主体系_ISCO88_GPT56.xlsx",
       "system": "ISCO88",
       "rows": 390,
-      "sha256": "5380d66f0c155b960460c7311971a44a9d2cf8d70549150f0f068589e5c538ac"
+      "sha256": "867b71c2cfd9cdad3250be847d1c8051a695131baf61e1c70f56e95369a0158f"
     },
     {
       "file": "职业体系匹配_主体系_ONET_SOC2019_full_GPT56.xlsx",
       "system": "ONET_SOC2019_full",
       "rows": 1016,
-      "sha256": "40cd623ed183aa0fb35f0dff87dd5df0a1908f9141284d68915d1be78272422c"
+      "sha256": "9384f722a150e9c72aab2373a130bba0c9e48accc0c3eb23062d8a2b42ee64ee"
     },
     {
       "file": "职业体系匹配_主体系_SOC2010_GPT56.xlsx",
       "system": "SOC2010",
       "rows": 840,
-      "sha256": "6c72dfd2dac6c257dd446fac2c1a714cf28b2485f2d1a65f984d310ec838ae36"
+      "sha256": "62ee0e2de2c57d44e3b3d0398ab8902cd78a94d356e2fc0c8d016fa9f644783b"
     }
   ]
 }

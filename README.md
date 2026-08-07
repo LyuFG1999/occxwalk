@@ -1,8 +1,8 @@
 # occxwalk
 
-Stata occupation-code labels, descriptions, and crosswalks for 11 coding systems.
+Stata occupation-code labels, descriptions, and crosswalks for 12 coding systems.
 
-用于 11 套职业编码体系的 Stata 值标签、职业名称/描述生成和跨体系转换工具。
+用于 12 套职业编码体系的 Stata 值标签、职业名称/描述生成和跨体系转换工具。
 
 [中文说明](README.zh-CN.md) · [English documentation](README.en.md)
 
@@ -25,10 +25,10 @@ The command runs fully offline after installation. Python, an API key, and an on
 
 ## Included data / 内置数据
 
-- 5,764 unique source occupation codes / 5,764 个唯一源职业代码
-- 57,640 directed crosswalk records / 57,640 条有方向的转换记录
-- Source systems: CFPS, CGSS06, CSS, GB2015_full, GB2015_reduce, GB9909, ISCO08, ISCO68, ISCO88, ONET_SOC2019_full, SOC2010
-- GPT56 workbook snapshot dated 2026-07-24 / GPT56 工作簿快照日期：2026-07-24
+- 6,214 unique source occupation codes / 6,214 个唯一源职业代码
+- 68,354 directed crosswalk records / 68,354 条有方向的转换记录
+- Source systems: CFPS, CGSS06, CSS, GB2015_full, GB2015_reduce, GB2022, GB9909, ISCO08, ISCO68, ISCO88, ONET_SOC2019_full, SOC2010
+- GPT56 workbook snapshot dated 2026-08-06 / GPT56 工作簿快照日期：2026-08-06
 
 ## Repository layout / 仓库结构
 
@@ -36,7 +36,7 @@ The command runs fully offline after installation. Python, an API key, and an on
 - `occxwalk_catalog.dta`, `occxwalk_links.dta`: packaged offline lookup data
 - `examples/occxwalk_example.do`: runnable bilingual example
 - `tests/test_occxwalk.do`: Stata regression tests
-- `scripts/build_occxwalk_data.py`: rebuild packaged `.dta` files from the 11 finalized Excel workbooks
+- `scripts/build_occxwalk_data.py`: rebuild packaged `.dta` files from the 12 finalized Excel workbooks
 - `scripts/model_smoke_test.py`: optional OpenAI API/model connectivity test for developers
 
 ## Important limitation / 重要限制

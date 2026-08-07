@@ -1,6 +1,6 @@
 # occxwalk English documentation
 
-`occxwalk` is a Stata package that converts eleven finalized GPT56 occupation-system workbooks into an offline lookup tool. It can:
+`occxwalk` is a Stata package that converts twelve finalized GPT56 occupation-system workbooks into an offline lookup tool. It can:
 
 1. Attach Stata value labels to numeric occupation-code variables.
 2. Generate an occupation name or full description from a numeric or string code.
@@ -17,6 +17,7 @@ Normal use is fully offline. The command does not access the source Excel files,
 | CSS | `css` | numeric or string |
 | GB2015_full | `gb2015`, `gb15`, `gb15f` | numeric or string |
 | GB2015_reduce | `gb15r`, `gb2015r` | numeric or string |
+| GB2022 | `gb2022`, `gb22`, `gb2022full` | numeric or string |
 | GB9909 | `gb99`, `gb09` | numeric or string |
 | ISCO08 | `isco08`, `isco2008` | numeric or string |
 | ISCO68 | `isco68`, `isco1968` | numeric or string |
@@ -86,7 +87,7 @@ occxwalk text occupation, from(CFPS) generate(occupation_name) field(name)
 occxwalk text occupation, from(CFPS) generate(occupation_description) field(description)
 ```
 
-For the nine digit-only systems, the source variable may be numeric or string. Leading zeros are normalized: numeric ISCO08 value `110` and string value `"0110"` both resolve to canonical code `0110`.
+For the ten digit-only systems, the source variable may be numeric or string. Leading zeros are normalized: numeric ISCO08 value `110` and string value `"0110"` both resolve to canonical code `0110`.
 
 ### 3. Crosswalk to another system
 
@@ -117,12 +118,12 @@ Data-changing subcommands return:
 
 ## Python and model configuration
 
-Python and a model are not runtime dependencies. Python is needed only to rebuild the packaged `.dta` files from the eleven finalized Excel workbooks. API/model settings are needed only if a developer separately regenerates mappings with a model. See [Developer guide](docs/DEVELOPMENT.en.md).
+Python and a model are not runtime dependencies. Python is needed only to rebuild the packaged `.dta` files from the twelve finalized Excel workbooks. API/model settings are needed only if a developer separately regenerates mappings with a model. See [Developer guide](docs/DEVELOPMENT.en.md).
 
 ## Data notes and limitations
 
-- The package contains 5,764 unique source codes and 57,640 directed crosswalk records.
-- The source-workbook snapshot is dated 2026-07-24; SHA-256 hashes are recorded in `occxwalk_manifest.json`.
+- The package contains 6,214 unique source codes and 68,354 directed crosswalk records.
+- The source-workbook snapshot is dated 2026-08-06; SHA-256 hashes are recorded in `occxwalk_manifest.json`.
 - CFPS codes 10544–10548 each have two conflicting rows based on enterprise size, but the code itself is identical. The program therefore uses the first Excel row deterministically and prints a warning.
 - Exact duplicate GB2015_full rows for 20000 and 20100 were removed without information loss.
 - Confidence values are GPT56 workbook outputs and do not imply endorsement by an official statistical classification authority.
