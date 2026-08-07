@@ -8,7 +8,7 @@ Python, an API key, and a model are not required. `occxwalk.ado` reads only the 
 
 ### Rebuild or regenerate mappings
 
-- Rebuilding `.dta` assets from the eleven **already matched** GPT56 Excel workbooks requires Python only.
+- Rebuilding `.dta` assets from the twelve **already matched** GPT56 Excel workbooks requires Python only.
 - Regenerating occupation matches from raw occupation lists requires Python, the OpenAI SDK, an API key, and a model. This repository provides a connectivity check and configuration convention, but it does not include the original mapping prompt or a batch model-generation pipeline.
 
 ## Configure the Python build environment
@@ -33,7 +33,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements-build.txt
 ```
 
-Place the eleven files named `职业体系匹配_主体系_<system>_GPT56.xlsx` in one input directory, one workbook for every supported system. Then run:
+Place the twelve files named `职业体系匹配_主体系_<system>_GPT56.xlsx` in one input directory, one workbook for every supported system. Then run:
 
 ```powershell
 python scripts/build_occxwalk_data.py `
@@ -41,7 +41,7 @@ python scripts/build_occxwalk_data.py `
   --output-dir "."
 ```
 
-The builder validates required systems and columns, normalizes numeric-system keys, applies deterministic source-row duplicate handling, writes the two `.dta` assets and manifest, and checks key uniqueness, confidence bounds, and complete ten-target coverage.
+The builder validates required systems and columns, normalizes numeric-system keys, applies deterministic source-row duplicate handling, writes the two `.dta` assets and manifest, and checks key uniqueness, confidence bounds, and complete eleven-target coverage.
 
 ## Configure the OpenAI API and model (optional developer workflow)
 
@@ -87,5 +87,4 @@ From the repository root, run:
 do tests/test_occxwalk.do .
 ```
 
-The test covers numeric value labels, names, long descriptions, ISCO08 leading zeros, ONET/SOC string restrictions, crosswalk output, and the CFPS ambiguity warning.
-
+The test covers numeric value labels, names, long descriptions, the new GB2022 system and aliases, ISCO08 leading zeros, ONET/SOC string restrictions, crosswalk output, and the CFPS ambiguity warning.

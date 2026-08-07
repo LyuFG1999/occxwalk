@@ -8,7 +8,7 @@
 
 ### 重新构建或重新生成映射
 
-- 从 11 个**已经完成匹配**的 GPT56 Excel 工作簿重新生成 `.dta`：只需要 Python。
+- 从 12 个**已经完成匹配**的 GPT56 Excel 工作簿重新生成 `.dta`：只需要 Python。
 - 从原始职业清单重新调用模型、重新判断职业匹配：需要 Python、OpenAI SDK、API key 和 model；本仓库只提供连接测试与配置约定，不包含原始映射提示词和批量生成管线。
 
 ## 配置 Python 构建环境
@@ -33,7 +33,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements-build.txt
 ```
 
-准备一个目录，其中包含以下 11 个文件：
+准备一个目录，其中包含以下 12 个文件：
 
 ```text
 职业体系匹配_主体系_CFPS_GPT56.xlsx
@@ -41,6 +41,7 @@ python -m pip install -r requirements-build.txt
 职业体系匹配_主体系_CSS_GPT56.xlsx
 职业体系匹配_主体系_GB2015_full_GPT56.xlsx
 职业体系匹配_主体系_GB2015_reduce_GPT56.xlsx
+职业体系匹配_主体系_GB2022_GPT56.xlsx
 职业体系匹配_主体系_GB9909_GPT56.xlsx
 职业体系匹配_主体系_ISCO08_GPT56.xlsx
 职业体系匹配_主体系_ISCO68_GPT56.xlsx
@@ -59,11 +60,11 @@ python scripts/build_occxwalk_data.py `
 
 构建脚本会：
 
-1. 验证 11 套体系和全部必需列；
+1. 验证 12 套体系和全部必需列；
 2. 对数字体系生成去除前导零的内部匹配键；
 3. 按 Excel 源行顺序处理重复代码；
 4. 生成 `occxwalk_catalog.dta`、`occxwalk_links.dta` 和 `occxwalk_manifest.json`；
-5. 验证主键唯一、置信度位于 `[0,1]`、且每个唯一源代码具有 10 条目标体系映射。
+5. 验证主键唯一、置信度位于 `[0,1]`、且每个唯一源代码具有 11 条目标体系映射。
 
 ## 配置 OpenAI API 与 model（仅可选开发流程）
 
@@ -109,5 +110,4 @@ OpenAI 官方参考：
 do tests/test_occxwalk.do .
 ```
 
-测试覆盖数字值标签、职业名称、完整描述、ISCO08 前导零、ONET/SOC 文本限制、跨体系转换和 CFPS 歧义警告。
-
+测试覆盖数字值标签、职业名称、完整描述、新增 GB2022 及别名、ISCO08 前导零、ONET/SOC 文本限制、跨体系转换和 CFPS 歧义警告。

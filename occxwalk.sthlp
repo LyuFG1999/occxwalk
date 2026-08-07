@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 1.0.0 04aug2026}{...}
+{* *! version 1.1.0 07aug2026}{...}
 {vieweralsosee "occxwalk" "help occxwalk"}{...}
 
 {title:Title}
@@ -56,6 +56,7 @@ Numeric and string variables are accepted for digit-only systems.  ONET_SOC2019_
 {p2col:CSS}css{p_end}
 {p2col:GB2015_full}gb2015_full, gb2015, gb15, gb15f{p_end}
 {p2col:GB2015_reduce}gb2015_reduce, gb15r, gb2015r{p_end}
+{p2col:GB2022}gb2022, gb22, gb2022full{p_end}
 {p2col:GB9909}gb9909, gb99, gb09{p_end}
 {p2col:ISCO08}isco08, isco2008{p_end}
 {p2col:ISCO68}isco68, isco1968{p_end}
@@ -102,6 +103,8 @@ Numeric and string variables are accepted for digit-only systems.  ONET_SOC2019_
 
 {phang2}{cmd:. occxwalk match soc_code, from(soc10) to(gb2015) prefix(gb15)}
 
+{phang2}{cmd:. occxwalk match old_code, from(gb15) to(gb22) prefix(gb2022)}
+
 
 {title:Code normalization and source-data notes}
 
@@ -129,7 +132,6 @@ All data-changing subcommands return:
 {title:Data provenance}
 
 {pstd}
-The package data were generated from the eleven files named
-{it:职业体系匹配_主体系_<system>_GPT56.xlsx}, dated 24 July 2026.
+The package data were generated from the twelve files named
+{it:职业体系匹配_主体系_<system>_GPT56.xlsx}, dated 6 August 2026.
 The workbooks are not required at run time; the packaged .dta files contain all names, descriptions, target codes, target names, and confidence values used by the command.
-

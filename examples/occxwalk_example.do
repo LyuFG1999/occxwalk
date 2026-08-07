@@ -44,7 +44,24 @@ list cfps_code isco08_code isco08_name isco08_confidence, ///
     noobs abbreviate(28)
 
 * ------------------------------------------------------------
-* 4. Leading-zero normalization / 前导零规范化
+* 4. New GB2022 system / 新增 GB2022 体系
+* ------------------------------------------------------------
+clear
+input long gb2022_code
+10100
+10201
+10202
+99999
+end
+
+occxwalk label gb2022_code, from(gb22) replace
+occxwalk text gb2022_code, from(GB2022) ///
+    generate(gb2022_name) field(name)
+occxwalk match gb2022_code, from(gb2022full) to(CFPS) prefix(cfps)
+list, noobs abbreviate(28)
+
+* ------------------------------------------------------------
+* 5. Leading-zero normalization / 前导零规范化
 * ------------------------------------------------------------
 clear
 input str8 isco_source
@@ -60,7 +77,7 @@ occxwalk text isco_source, from(isco2008) ///
 list, noobs
 
 * ------------------------------------------------------------
-* 5. String-code systems / 文本代码体系
+* 6. String-code systems / 文本代码体系
 * ------------------------------------------------------------
 clear
 input str12 onet_code
